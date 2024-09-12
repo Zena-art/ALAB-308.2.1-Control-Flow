@@ -15,9 +15,9 @@ let maxCapacity = area / plantSize;
 
 //Predict the plant growth after a specific number of weeks.
 
-const week = plantSize *  plantCount;
-if ((week / maxCapacity) * 100 <= 50){
+const week1 = plantSize *  plantCount;
+if ((week1 / maxCapacity) * 100 <= 50){
   console.log("Planted");
-}else if((week / maxCapacity) * 100 >= 50 && (week / maxCapacity) * 100 <= 80){
+}else if((week1 / maxCapacity) * 100 >= 50 && (week / maxCapacity) * 100 <= 80){
   console.log("Monitored");
-} 
+}
