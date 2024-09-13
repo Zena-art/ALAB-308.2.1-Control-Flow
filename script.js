@@ -119,11 +119,11 @@ if (plantSpace > gardern80Percent) {
 
 const newInitialPlants = 100;
 const weeks = 10;
-const finalPlants = initialPlants * Math.pow(2, weeks);
+const finalPlants = newInitialPlants * Math.pow(2, weeks);
 
 // Calculate the total space required for  plants:
 
-const totalSpaceRequired = finalPlants * plantSpace;
+const totalSpaceRequired = finalPlants * 0.8;
 
 // Calculate the additional space required:
 
@@ -134,11 +134,11 @@ const additionalSpaceRequired = totalSpaceRequired - area;
 const newRadius = Math.sqrt(totalSpaceRequired / PI);
 
 
-
-
 console.log('============== Part 2 =================');
-console.log(`The amount of additional space required for 100 plants after 10 weeks: ${totalSpaceRequired}
-If the space remainded circular, the radius of the garden will be ${newRadius}`);
+console.log(`Total Plants: ${finalPlants}
+Space needed for plants: ${totalSpaceRequired}  
+Radius of expanded garden: ${newRadius}
+Additional Space for 100 plants reqired: ${additionalSpaceRequired}`);
 
 
 
