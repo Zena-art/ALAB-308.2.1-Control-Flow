@@ -111,3 +111,34 @@ if (plantSpace > gardern80Percent) {
   );
 }
 //===============================================
+
+//Part 2 :
+// Calculate the number of plants after 10 weeks:
+// Number of plants = 100
+// Plants double every week
+
+const newInitialPlants = 100;
+const weeks = 10;
+const finalPlants = initialPlants * Math.pow(2, weeks);
+
+// Calculate the total space required for  plants:
+
+const totalSpaceRequired = finalPlants * plantSpace;
+
+// Calculate the additional space required:
+
+const additionalSpaceRequired = totalSpaceRequired - area;
+
+
+// Calculate the radius of the expanded circular garden
+const newRadius = Math.sqrt(totalSpaceRequired / PI);
+
+
+
+
+console.log('============== Part 2 =================');
+console.log(`The amount of additional space required for 100 plants after 10 weeks: ${totalSpaceRequired}
+If the space remainded circular, the radius of the garden will be ${newRadius}`);
+
+
+
