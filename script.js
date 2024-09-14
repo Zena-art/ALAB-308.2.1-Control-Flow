@@ -112,6 +112,8 @@ if (plantSpace > gardern80Percent) {
 }
 //===============================================
 
+
+
 //Part 2 :
 // Calculate the number of plants after 10 weeks:
 // Number of plants = 100
@@ -136,9 +138,35 @@ const newRadius = Math.sqrt(totalSpaceRequired / PI);
 
 console.log('============== Part 2 =================');
 console.log(`Total Plants: ${finalPlants}
-Space needed for plants: ${totalSpaceRequired}  
-Radius of expanded garden: ${newRadius}
-Additional Space for 100 plants reqired: ${additionalSpaceRequired}`);
+Space needed for plants: ${totalSpaceRequired} square meters 
+Radius of expanded garden: ${newRadius} radius
+Additional Space for 100 plants reqired: ${additionalSpaceRequired} square meters`);
 
 
 
+//===============================================
+
+
+
+// Part 3:
+
+
+
+/**Use try and catch to wrap your work in an error-handling block. If the amount of space required to hold the originally provided number of plants exceeds the amount of space available, throw a new error and log an appropriate message. */
+
+try {
+  // Calculate the total area required for the initial number of plants
+  const totalRequiredSpace = (newInitialPlants + initialPlants) * 0.8;
+  
+  // Check if the required space exceeds the available space
+  if (totalRequiredSpace > area) {
+    // If required space is more than available space, throw an error
+    throw new Error(`Insufficient space: Required ${totalRequiredSpace.toFixed(2)} square meters, but only ${area.toFixed(2)} square meters available.`);
+  }
+  
+  // If there's enough space, log a success message
+  console.log(`Sufficient space: Required ${totalRequiredSpace.toFixed(2)} square meters. Available space is ${area.toFixed(2)} square meters.`);
+} catch (error) {
+  // Log the error message
+  console.log(error);
+}
